@@ -13,7 +13,7 @@ function getReceipt() {
     }
     if (selectedSize === "Micro Pizza") {
         sizeTotal = 6;
-    } else if (selectedSize === "Peronal Pizza") {
+    } else if (selectedSize === "Personal Pizza") {
         sizeTotal = 8;
     } else if (selectedSize === "Medium Pizza") {
         sizeTotal = 10;
@@ -43,7 +43,8 @@ function getToppings(runningTotal, text1) {
     }
     var toppingCount = selectedTopping.length;
     if (toppingCount > 1) {
-    } else {
+        toppingTotal = (toppingCount-1);
+    } else {    
         toppingTotal = 0;
     }
     runningTotal = (runningTotal + toppingTotal);
