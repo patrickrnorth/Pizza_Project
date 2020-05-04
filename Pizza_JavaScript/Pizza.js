@@ -55,3 +55,14 @@ function getToppings(runningTotal, text1) {
     document.getElementById("showText").innerHTML=text1;
     document.getElementById("totalPrice").innerHTML = "</h3>Total: <strong>$"+runningTotal+".00"+"</strong></h3>";
 };
+
+$("#slideshow > div:gt(0)").hide();
+
+setInterval(function() {
+    $('#slideshow > div:first')
+        .fadeOut(1000)
+        .next()
+        .fadeIn(1000)
+        .end()
+        .appendTo('#slideshow');        
+}, 3000);
